@@ -1,0 +1,10 @@
+# This code can be used to import data from NCBI with an SRA accession number.
+module load sratoolkit
+
+# Prefetch establishes the path to the data and downloads the directory
+prefetch SRR5130182
+prefetch SRR5130183
+
+# Fasterq-dump unloads the fastq files from the prefetched directory
+fasterq-dump SRR5130182
+fasterq-dump SRR5130183
