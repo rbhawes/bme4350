@@ -2,9 +2,24 @@
 module load sratoolkit
 
 # Prefetch establishes the path to the data and downloads the directory
+# First need ATAC seq files
 prefetch SRR5130182
 prefetch SRR5130183
+
+# Second need RNA seq files
+prefetch SRR5130719
+prefetch SRR5130720
+prefetch SRR5130721
+prefetch SRR5130722
+prefetch SRR5130723
+prefetch SRR5130724
 
 # Fasterq-dump unloads the fastq files from the prefetched directory
 fasterq-dump SRR5130182
 fasterq-dump SRR5130183
+fasterq-dump SRR5130719
+fasterq-dump SRR5130720
+fasterq-dump SRR5130721
+fasterq-dump SRR5130722
+fasterq-dump SRR5130723
+fasterq-dump SRR5130724
