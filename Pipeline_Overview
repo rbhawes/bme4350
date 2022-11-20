@@ -1,0 +1,25 @@
+#This pipeline is appropriated from http://education.knoweng.org/sequenceng/ pipelines for ATAC Seq and RNA Seq
+
+ATAC Seq pipeline:
+1. Import data from SRA
+2. Initial data quality inspection - FastQC
+3. Adapter trimming - trimgalore
+4. Alignment
+  a) Import GRCh38 human DNA primary assembly - wget, ENSEMBL
+  b) Build bowtie2 index - bowtie2-build
+  c) Align with bowtie2
+5. Post-alignment quality check - SAMTools
+6. Peak calling - HOMER
+
+
+RNA Seq pipeline:
+1. Import data from SRA
+2. Inital data quality inspection - FastQC
+3. Adapter trimming - trimgalore
+4. Alignment
+  a) Import GRCh38 human cDNA - wget, ENSEMBL
+  b) Build bowtie2 index - bowtie-build
+  c) Align with bowtie2
+5. Post-alignment quality check - SAMTools
+6. Quantification - RSEM
+7. Data analysis - R
