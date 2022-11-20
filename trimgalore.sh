@@ -1,3 +1,5 @@
+#This code runs trimgalore on raw files to remove illumina adapters and reads less than 20 bp or with quality score less than 20
+
 #! /bin/bash
 #SBATCH -A bme4350
 #SBATCH -p standard
